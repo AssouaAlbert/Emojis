@@ -1,0 +1,114 @@
+:root {
+  --color-background-color: #fe346e;
+  --color-emoji-face: #ffe277;
+  --color-parts: #000
+; }
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.25%; }
+
+body {
+  background-color: var(--color-background-color);
+  width: 100%;
+  height: 100vh; }
+
+.container {
+  padding: 10rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: space-between;
+  align-items: center; }
+
+.emoji {
+  position: relative;
+  width: 20em;
+  height: 20rem;
+  border: 1px solid #919090;
+  border-radius: 50%;
+  background-color: var(--color-emoji-face);
+  overflow: hidden; }
+  .emoji__eye {
+    width: 2rem;
+    height: 4rem;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--color-parts);
+    z-index: 99; }
+    .emoji__eye-left {
+      top: 25%;
+      left: 25%; }
+    .emoji__eye-right {
+      top: 25%;
+      right: 25%; }
+  .emoji__mouth {
+    width: 10rem;
+    height: 5rem;
+    background-color: var(--color-parts);
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99; }
+    .emoji__mouth-smile {
+      border-radius: 0.3rem 0.3rem 10rem 10rem; }
+    .emoji__mouth-mask {
+      background-color: #f8ecec;
+      border: 2px solid #929292;
+      border-radius: 5px; }
+    .emoji__mouth-oh {
+      width: 4rem;
+      height: 6rem;
+      border-radius: 50%; }
+  .emoji__rope-top-left {
+    border: 2px solid #929292;
+    width: 27%;
+    height: 1rem;
+    position: absolute;
+    background-color: #f8ecec;
+    top: 60%;
+    z-index: 50;
+    transform: skewY(15deg); }
+    .emoji__rope-top-left::after {
+      content: "";
+      border: 2px solid #929292;
+      width: 100%;
+      height: 1rem;
+      position: absolute;
+      background-color: #f8ecec;
+      top: 800%;
+      right: 0;
+      bottom: -10rem;
+      z-index: 50;
+      transform: skewY(-30deg); }
+  .emoji__rope-top-right {
+    border: 2px solid #929292;
+    width: 27%;
+    height: 1rem;
+    position: absolute;
+    background-color: #f8ecec;
+    top: 60%;
+    right: 0;
+    z-index: 50;
+    transform: skewY(-15deg); }
+    .emoji__rope-top-right::after {
+      content: "";
+      border: 2px solid #929292;
+      width: 100%;
+      height: 1rem;
+      position: absolute;
+      background-color: #f8ecec;
+      top: 800%;
+      right: 0;
+      bottom: -10rem;
+      z-index: 50;
+      transform: skewY(30deg); }
